@@ -1,0 +1,113 @@
+body
+{
+    max-width: 100%;
+    height: auto;
+    background-color: #d5d7dd;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: auto;
+    margin: 0px;
+    padding: 5px;
+}
+
+header
+{
+    display: block;
+    z-index: 10;
+    background-color: #0a000d;
+    max-width: 100% ;
+    min-width: 100%;
+    height: auto;
+    min-height: 24% ;
+    margin: 0px ;
+    border-bottom: 1px solid white;
+    
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    color: white;
+    overflow: auto;
+    box-sizing: border-box;
+
+}
+
+.div1
+{
+    max-width: 100%;
+    min-width: 100%;
+    background-color: #d5d7dd;
+    margin: 0px;
+    padding: 10px;
+    position: absolute;
+    right 0px;
+    left: 0px;
+    bottom: 0px;
+    top : 20%;
+    overflow: auto ;
+    box-sizing: border-box;
+
+}
+
+img.logo
+{
+    border: 2px solid white ;
+    border-radius: 50% ;
+    float: left;
+    width: 110px;
+    height: auto;
+    margin: 0px 5px 0px 10px;
+    display: block;
+    position: absolute;
+    top: 50%;    
+    left: 1% ;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+}
+
+.siteName
+{
+    display: block;
+    font-size: 400%;
+    text-shadow: 3px 0px 3px black ;
+    margin: 0px auto 0px 150px ;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.navLink
+{
+    color: #ff0000 ;
+    font-family: sans-serif;
+    text-decoration: none;
+    display: block;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white ;
+}
+
+.myForm
+{
+    color: white;
+    max-width = 90%;
+    height: auto;
+    border: 1px solid #f2f2f2 ;
+    background-color: #1a001a ;
+    margin: 5px ;
+    padding: 10px;
+}
+
+input.textInputs
+{
+    border: 2px solid red;
+    border-radius: 7%;
+    min-width: 20% ;
+    max-width: 30%;
+    height: 25px;
+    padding: 4px;
+    margin-left: 15%;
+    
+}
