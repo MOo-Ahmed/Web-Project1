@@ -8,7 +8,7 @@ function validateLoginForm()
     }
     else if (psw.length < 8){
         
-        window.alert("Password must be filled out");
+        window.alert("Password must be at least 8 characters");
         return false;
     }
     return true;
