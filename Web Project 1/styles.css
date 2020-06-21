@@ -2,7 +2,7 @@ body
 {
     max-width: 100%;
     height: auto;
-    background-color: #d5d7dd;
+    background-color: #f2f2f2;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -82,7 +82,7 @@ img.logo
 .navLink
 {
     color: #ff0000 ;
-    font-family: sans-serif;
+    font-family:courier,arial,helvetica;    
     text-decoration: none;
     display: block;
     -webkit-text-stroke-width: 1px;
@@ -91,23 +91,92 @@ img.logo
 
 .myForm
 {
+    font-family:courier,arial,helvetica;
+    margin: 140px auto 30px auto ; 
     color: white;
-    max-width = 90%;
+    width: auto;
+    max-width: 100%;
     height: auto;
-    border: 1px solid #f2f2f2 ;
-    background-color: #1a001a ;
-    margin: 5px ;
+    border: 1px solid black ;
+    background-color: #6600ff;
     padding: 10px;
+    padding-bottom: 30px;
+    box-shadow: 3px 0px 3px black;
+    overflow: auto;
+}
+
+fieldset
+{
+    border: 1px solid black ;
+    margin-left: 15px;
+    padding: 10px;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    overflow: auto;
+    
+}
+
+legend
+{
+    font-size: 200%;
+    font-weight: bold;
+}
+
+label
+{
+    font-weight: bold;
+    font-family:courier,arial,helvetica;
+    margin: 10px;
+    text-shadow: 1px 1px black ;
 }
 
 input.textInputs
 {
-    border: 2px solid red;
-    border-radius: 7%;
-    min-width: 20% ;
-    max-width: 30%;
+    font-family:courier,arial,helvetica;
+    border: 2px solid black;
+    border-radius: 8%;
+    min-width: 40% ;
+    max-width: 60%;
     height: 25px;
-    padding: 4px;
-    margin-left: 15%;
+    padding: 8px;
+    margin: 1% 2% 1% 9%;
+    background-color: #f2f2f2;
     
 }
+
+.linkButton
+{
+    display: inline-block;
+    max-width: 50% ;
+    font-family:Georgia,arial,helvetica;
+    text-decoration: none;
+    background-color: yellow;
+    padding: 8px;
+    margin: 20px;
+    color: black;
+    border: none;
+    font-size: 1em;
+}
+
+.linkButton:active
+{
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+    transform: translateY(1px);
+}
+
+.linkButton:hover
+{
+    
+    background-color: red;
+    color: white;
+}
+
+@media only screen and (min-width: 500px) {
+    .myForm{
+        max-width: 60% ;
+    }

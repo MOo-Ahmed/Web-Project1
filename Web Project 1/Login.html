@@ -3,23 +3,32 @@
 <head>
     <title>ZYX Store | Login</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.00, maximum-scale=2.00, minimum-scale=1.00">
     <link rel="stylesheet" href="styles.css">
+    <script src= "myScript.js"></script>
 </head>
 <body>
-    <form class="myForm"  target="_blank" method="post">
+    <form name="login" onsubmit="return validateLoginForm()"  
+          action="HomePage.html" class="myForm"  target="_self">
+        <br><br>
+        <label>Not registered yet? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <a href="RegPage.html" class="linkButton">Sign Up</a>
+        <br><br>
         <fieldset>
         <legend>Sign in</legend>
-        <label for="1">Email : </label><br>
-        <input class="textInputs" type="text" id="1" pattern="email" autofocus><br><br>
+        <input placeholder="Your e-mail" name="email" class="textInputs" type="text" id="1" 
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autofocus><br><br>
         <!-- when page loads, this input is focused -->
-        <label for="psw">Password : </label><br>
-        <input class="textInputs" type="password" id="psw" maxlength="15" required><br>
+        <input placeholder="Your password"  name="psw" class="textInputs" type="password" id="psw" maxlength="15" required><br>
+        
+        <br><br>
         </fieldset>
         <br>
-        <input type="submit" value="Log in"  class="formBtn" required>
-        <br><br>
-        <input type="reset" value="Reset" class="formBtn" required>
-        <br><br>
+        <input type="reset" value="Reset" class="linkButton" required>
+        <br>
+        <input type="submit" value="Log in"  class="linkButton"  required>
+        
+        
     </form>  
     
 </body>
