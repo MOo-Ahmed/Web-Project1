@@ -4,9 +4,35 @@
     <title>ZYX Store | SignUp</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="styles.css">
+    <script src="myScript.js"></script>
 </head>
 <body>
-    
+    <form name="register" onsubmit="return validateRegisterForm()"  
+          action="HomePage.html" class="myForm"  target="_self">
+        <br><br>
+        <fieldset>
+        <legend>Sign up</legend> 
+        <input name="name" class="textInputs" type="text" placeholder="Your name .." autofocus required><br><br>
+        <input placeholder="Your e-mail" name="email" class="textInputs" type="text"
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br><br>
+        <!-- when page loads, this input is focused -->
+        <input placeholder="Your password"  name="psw" class="textInputs" type="password" 
+               pattern="[a-z0-9]" required>
+            <br>
+            <p class="formHints">Password must contain both letters and numbers</p>
+            <br>
+        <input placeholder="Confirm password"  name="psw2" class="textInputs" type="password" required>
+            <br>
+        
+        <br><br>
+        </fieldset>
+        <br>
+        <input type="reset" value="Reset" class="linkButton" required>
+        <br>
+        <input type="submit" value="Register"  class="linkButton"  required>
+        
+        
+    </form>
     
 </body>
 </html> 

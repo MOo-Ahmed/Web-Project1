@@ -115,34 +115,41 @@ fieldset
     height: auto;
     box-sizing: border-box;
     overflow: auto;
-    
+    background-color: #6600ff;
+    color: black;
 }
 
 legend
 {
     font-size: 200%;
     font-weight: bold;
+    color: white;
+    text-align: center;
 }
 
 label
 {
     font-weight: bold;
-    font-family:courier,arial,helvetica;
+    font-family: open-sans,arial;
     margin: 10px;
     text-shadow: 1px 1px black ;
 }
 
 input.textInputs
 {
+    display: block;
     font-family:courier,arial,helvetica;
-    border: 2px solid black;
-    border-radius: 8%;
+    border:none ;
+    border-bottom: 4px solid white;
     min-width: 40% ;
     max-width: 60%;
     height: 25px;
     padding: 8px;
+    padding-left: 25px;
     margin: 1% 2% 1% 9%;
-    background-color: #f2f2f2;
+    background-color: inherit;
+    color: white;
+    
     
 }
 
@@ -152,11 +159,13 @@ input.textInputs
     max-width: 50% ;
     font-family:Georgia,arial,helvetica;
     text-decoration: none;
-    background-color: yellow;
-    padding: 8px;
+    background-color: white;
+    padding: 8px 15px;
+    
     margin: 20px;
     color: black;
     border: none;
+    border-radius: 20px;
     font-size: 1em;
 }
 
@@ -180,3 +189,18 @@ input.textInputs
     .myForm{
         max-width: 60% ;
     }
+}
+
+.formHints
+{
+    font-family: Calibri;
+    color: yellow;
+    margin: 1% 2% 1% 9%;
+    
+}
+ 
+::placeholder {
+  color: white;
+  opacity: 1; 
+}
+
