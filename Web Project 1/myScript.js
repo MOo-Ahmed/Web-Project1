@@ -11,6 +11,7 @@ function validateLoginForm()
         window.alert("Password must be at least 8 characters");
         return false;
     }
+    alert("Successful login");
     return true;
 }
 
@@ -39,5 +40,15 @@ function validateRegisterForm()
        alert("Passwords don't match !");
         return false ;
     }
+    alert("Successful registration");
     return true ;
+}
+
+function toggle1(x){
+    if(x.style.display == "none"){
+        x.style.display = "block";
+    }
+    else{
+        x.style.display = "none";
+    }
 }

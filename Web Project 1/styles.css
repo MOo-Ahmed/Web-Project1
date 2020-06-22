@@ -2,7 +2,7 @@ body
 {
     max-width: 100%;
     height: auto;
-    background-color: #f2f2f2;
+    background-color: #444;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,26 +11,36 @@ body
     padding: 5px;
 }
 
+.brandWords
+{
+    font-family: Georgia,Arial;
+    color: beige;
+    margin: 0px auto 0px 170px ;
+    color: aliceblue;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); 
+}
+
 header
 {
     display: block;
     z-index: 10;
-    background-color: #0a000d;
+    background-color: #000000;
+    background-size: cover;
     max-width: 100% ;
     min-width: 100%;
     height: auto;
-    min-height: 24% ;
     margin: 0px ;
-    border-bottom: 1px solid white;
-    
+    border-bottom: 0px solid white;
+    min-height: 15%;
     position: fixed;
     right: 0px;
     left: 0px;
     top: 0px;
     color: white;
     overflow: auto;
-    box-sizing: border-box;
-
 }
 
 .div1
@@ -72,7 +82,9 @@ img.logo
     display: block;
     font-size: 400%;
     text-shadow: 3px 0px 3px black ;
-    margin: 0px auto 0px 150px ;
+    margin: 0px ;
+    background-color: orangered;
+    color: aliceblue;
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
@@ -81,12 +93,14 @@ img.logo
 
 .navLink
 {
-    color: #ff0000 ;
+    color: aliceblue;
     font-family:courier,arial,helvetica;    
     text-decoration: none;
     display: block;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white ;
+    -webkit-text-stroke-color: orangered ;
+    padding: 13px;
+    text-align: center;
 }
 
 .myForm
@@ -193,7 +207,7 @@ input.textInputs
 
 .formHints
 {
-    font-family: Calibri;
+    font-family: Calibri,Times-New-Roman;
     color: yellow;
     margin: 1% 2% 1% 9%;
     
@@ -204,3 +218,121 @@ input.textInputs
   opacity: 1; 
 }
 
+.navBar
+{
+    display: block;
+    z-index: 9;
+    background-color: #000000;
+    max-width: 100% ;
+    min-width: 100%;
+    height: auto;
+    min-height: 7% ;
+    margin: 0em 0px 4px 0px ;
+    color: white;
+    overflow: auto;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 15%;
+}
+
+.HomeDiv
+{
+    display: block;
+    max-width: 100% ;
+    min-width: 100%;
+    height: auto;
+    min-height: 9% ;
+    margin: 0em 0px 4px 0px ;
+    padding: 1em;
+    color: white;
+    overflow: auto;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 24%;
+}
+
+.contentDiv
+{
+    font-family: sans-serif,arial,helvetica;
+    background-color: #dddddd;
+    display: block;
+    
+    max-width: 70% ;
+    min-width: 50%;
+    height: auto;
+    margin: 2em 1em 1em 1em ;
+    padding: 1em;
+    color: black;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.navBar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navBar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.contentDiv img
+{
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain;
+}
+
+.toggleBtn
+{
+    position: relative;
+    left: 75%;
+    right: 4%;
+    top: 20%;
+    bottom: auto;
+}
+
+.toggleBtn2
+{
+    position: relative;
+    left: 75%;
+    right: 4%;
+    top: auto;
+    bottom: 20%;
+}
+
+.toggleBtn:hover
+{
+    background-color: red;
+}
+
+.toggleBtn2:hover
+{
+    background-color: yellow;
+    color: black;
+}
+
+.toggleBtn , .toggleBtn2
+{
+    border-radius: 20px;
+    border: none;
+    width: 10em;
+    background-color: dodgerblue;
+    color: antiquewhite;
+    padding: 10px;
+    
+    min-height: 10%;
+    max-height: 18%
+    float: right;
+    display: inline-block;
+}

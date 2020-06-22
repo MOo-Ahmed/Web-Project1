@@ -5,12 +5,34 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.00, maximum-scale=2.00, minimum-scale=1.00">
     <link rel="stylesheet" href="styles.css">
+    <script src="myScript.js"></script>
 </head>
 <body>
-    <header>
-        <img src="Photos/logo.png" alt="Site logo" class="logo">
-        <h1 class="siteName"><a class="navLink" href="HomePage.html">ZYX</a></h1>
-    </header>
-    
+<header>
+    <h1 class="siteName"><a class="navLink" href="HomePage.html">ZYX</a></h1>
+    <h3 class="brandWords">Giving you the best</h3>
+</header>
+<nav class="navBar">
+    <div class="topnav">
+    <a href="HomePage.html">Home</a>
+    <a href="Products.html">Products</a>
+    </div>
+        
+</nav>
+<div class="HomeDiv">
+    <div class="contentDiv" id="ContentDiv1">
+    <h1>Cars at the present:</h1>
+    <img src="Photos/wall%20(4).jpg" alt="Cars nowadays">
+    </div>
+    <button class="toggleBtn" onclick="toggle1(document.getElementById('ContentDiv1'))">
+        Toggle section 1</button>
+ 
+    <div class="contentDiv" id="ContentDiv2">
+    <h1>Cars at the future:</h1>
+    <img src="Photos/future-car.jpg" alt="Tomorrow cars">
+    </div>
+    <button class="toggleBtn2" onclick="toggle1(document.getElementById('ContentDiv2'))">
+        Toggle section 2</button>
+</div>
 </body>
-</html> 
+</html>
