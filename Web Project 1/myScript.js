@@ -2,13 +2,12 @@ function validateLoginForm()
 {
 	var email = document.forms["login"]["email"].value;
     var psw = document.forms["login"]["psw"].value;
-    if (email.indexOf(" ") != -1) {
-        window.alert("Email shouldn't contain white space");
+    if (email === "") {
+        window.alert("Email/Username shouldn't be empty");
         return false;
     }
-    else if (psw.length < 8){
-        
-        window.alert("Password must be at least 8 characters");
+    else if (psw.toString().length <= 2 ){
+        window.alert("Password must be longer");
         return false;
     }
     alert("Successful login");

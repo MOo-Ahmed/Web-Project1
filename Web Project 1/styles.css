@@ -1,21 +1,23 @@
-body
+.Body
 {
+    font-family: Georgia,Arial,Helvetica;
     max-width: 100%;
     height: auto;
     background-color: #444;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    overflow: auto;
+    overflow: hidden;
     margin: 0px;
+    margin-top: 11rem;
     padding: 5px;
+    box-sizing: border-box;
 }
 
 .brandWords
 {
-    font-family: Georgia,Arial;
+    font-family: Brush-Script-MT, Georgia,Arial;
     color: beige;
-    margin: 0px auto 0px 170px ;
+    margin: 0px auto 0px 14rem ;
     color: aliceblue;
     position: absolute;
     top: 50%;
@@ -27,7 +29,7 @@ header
 {
     display: block;
     z-index: 10;
-    background-color: #000000;
+    background-color: #85adad;
     background-size: cover;
     max-width: 100% ;
     min-width: 100%;
@@ -81,41 +83,61 @@ img.logo
 {
     display: block;
     font-size: 400%;
-    text-shadow: 3px 0px 3px black ;
-    margin: 0px ;
-    background-color: orangered;
+    text-shadow: 2px 3px 3px black ;
+    margin: auto ;
     color: aliceblue;
+}
+
+.navbar .siteName{
+    float: left;
+    margin-left: 1rem;
+}
+
+header .siteName
+{
+    display: block;
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    font-size: 400%;
+    text-shadow: 3px 0px 3px black ;
+    margin: 0px ;
+    margin-right: 3rem;
+    color: aliceblue;
+    
 }
 
 .navLink
 {
-    color: aliceblue;
-    font-family:courier,arial,helvetica;    
+    font-weight: bolder;
+    color: white;
+    font-family: Times, Copperplate, courier,arial,helvetica;    
     text-decoration: none;
     display: block;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: orangered ;
+    -webkit-text-stroke-color: white ;
+    text-shadow: 2px 3px 5px black ;
     padding: 13px;
     text-align: center;
 }
 
+div.container .navLink
+{
+    color: red;
+    -webkit-text-stroke-color: red ;
+    text-shadow: 2px 3px 5px white ;
+}
+
 .myForm
 {
-    font-family:courier,arial,helvetica;
-    margin: 140px auto 30px auto ; 
+    margin: 0px auto 30px auto ; 
     color: white;
-    width: auto;
-    max-width: 100%;
     height: auto;
     border: 1px solid black ;
-    background-color: #6600ff;
+    background-color: white;
     padding: 10px;
     padding-bottom: 30px;
-    box-shadow: 3px 0px 3px black;
     overflow: auto;
 }
 
@@ -143,10 +165,10 @@ legend
 
 label
 {
+    color: black;
     font-weight: bold;
-    font-family: open-sans,arial;
     margin: 10px;
-    text-shadow: 1px 1px black ;
+    text-shadow: 1px 1px white ;
 }
 
 input.textInputs
@@ -199,17 +221,12 @@ input.textInputs
     color: white;
 }
 
-@media only screen and (min-width: 500px) {
-    .myForm{
-        max-width: 60% ;
-    }
-}
-
 .formHints
 {
-    font-family: Calibri,Times-New-Roman;
-    color: yellow;
-    margin: 1% 2% 1% 9%;
+    font-family: Times-New-Roman,Calibri;
+    color: blueviolet;
+    margin: 1% 2% 1% 4%;
+    font-style: italic;
     
 }
  
@@ -255,20 +272,23 @@ input.textInputs
     top: 24%;
 }
 
-.contentDiv
+#divContent
 {
     font-family: sans-serif,arial,helvetica;
-    background-color: #dddddd;
-    display: block;
-    
-    max-width: 70% ;
-    min-width: 50%;
-    height: auto;
-    margin: 2em 1em 1em 1em ;
-    padding: 1em;
-    color: black;
-    overflow: auto;
+    background-color: #660033;
+    margin-bottom: 3rem;
+    margin-top: 7rem;
+    padding: 3rem;
     box-sizing: border-box;
+    color: white ;
+    text-shadow: 3px 0px 3px black ;
+    border-radius: 5px;
+}
+
+#divContent img
+{
+    border-radius: 20px;
+    
 }
 
 .navBar a {
@@ -335,4 +355,96 @@ input.textInputs
     max-height: 18%
     float: right;
     display: inline-block;
+}
+
+div.container
+{
+    margin-top: 3rem;
+    width: auto;
+    max-width: 80%;
+    padding: 2rem;
+}
+
+form.was-validated
+{
+    margin: auto;
+    margin-top: 0rem;
+    padding: 2rem;
+    background-color: white;
+}
+
+@media only screen and (min-width: 1000px) {
+    /* When screen width is less than 1000px, keep this style */
+    .myForm 
+    {
+        width: auto;
+        max-width: 35% ;
+    }
+    div.container
+    {
+        max-width: 80%;
+    }
+    .was-validated
+    {
+        max-width: 40% ;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    /* When screen width is greater than 1000px, keep this style */
+    .myForm, .was-validated
+    {
+        width: auto;
+        max-width: 100% ;
+    }
+    div.container
+    {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.myForm, .was-validated
+{
+    font-family: Cambria,Times, Arial,Georgia;
+    box-shadow: 3px 0px 3px black;
+
+}
+
+#MyNavBar
+{
+    background-color: #7a7a52;
+    background-color: #0066ff;
+    margin-top: 7rem ;
+    
+    
+}
+
+#ulNavBar li a
+{
+    color: white;
+    display: inline;
+
+}
+
+#ulNavBar li
+{    
+    display: inline;
+}
+
+#ulNavBar li:hover
+{
+    border: none;
+    border-bottom: 3px solid black;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+body.container-fluid
+{
+    background-color: #444;
+
 }
