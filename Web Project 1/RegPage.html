@@ -9,7 +9,7 @@
      <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
 </head>
-<body class="Body">
+<body class="container-fluid" id="SignupPage">
     <div class="container">
         
        <form name="register" onsubmit="return validateRegisterForm()"  class="was-validated"
@@ -40,6 +40,8 @@
             </div>
             <input type="reset" value="Reset" class="btn btn-sm btn-dark mb-2" >
             <input type="submit" value="Register"  class="btn btn-success btn-block mb-8 mlsm-4 mrsm-4"  >
+            <label>Already registered ? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <a href="Login.html" class="btn btn-sm btn-primary mb-2 mt-3">Sign in</a>
        </form>
     </div>
 </body>

@@ -51,3 +51,33 @@ function toggle1(x){
         x.style.display = "none";
     }
 }
+
+$(document).ready(function(){
+    $("button").click(function(){
+        $.get("", function(data) {
+            alert(data);
+        });
+    });
+});
+
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#T1 tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+function highlightRows(){
+    var table = document.getElementById("T1");
+    if(table.style.backgroundColor == "yellow"){
+        table.style.backgroundColor = "" ;
+        table.style.color = "white";
+    }
+    else{
+        table.setAttribute("style", "background-color:yellow;");
+        table.style.color = "black";
+    }
+    
+}
