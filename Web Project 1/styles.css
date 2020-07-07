@@ -276,7 +276,7 @@ input.textInputs
     top: 24%;
 }
 
-#divContent
+#divContent1, #divContent2
 {
     font-family: sans-serif,arial,helvetica;
     background-color: #660033;
@@ -548,4 +548,9 @@ body.container-fluid:not(#myFooter){
   border-radius: 50%;
   text-align: center;
   box-shadow: 1px 1px 0 #999;
+}
+
+#section1,#section2
+{
+    background-color: orangered;
 }

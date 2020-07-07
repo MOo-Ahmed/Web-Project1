@@ -43,12 +43,16 @@ function validateRegisterForm()
     return true ;
 }
 
-function toggle1(x){
+function toggle1(x, btn, secNum){
     if(x.style.display == "none"){
         x.style.display = "block";
+        var text = 'hide '.concat(secNum);
+        btn.innerHTML = text;
     }
     else{
         x.style.display = "none";
+        var text = 'show '.concat(secNum);
+        btn.innerHTML = text;
     }
 }
 

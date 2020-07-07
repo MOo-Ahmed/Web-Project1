@@ -15,7 +15,7 @@
     <h1 class="siteName"><a class="navLink" href="HomePage.html">CarX</a></h1>
     <h3 class="brandWords">Giving you the best</h3>
 </nav>
-<nav class="navbar navbar-expand-sm beBlack fixed-top" mb-5 id="MyNavBar">
+<nav class="navbar navbar-expand-sm beBlack fixed-top mb-5" id="MyNavBar">
     <ul class="navbar-nav" id="ulNavBar">
         <li class="nav-item">
           <a class="nav-link" href="HomePage.html">Home</a>
@@ -27,7 +27,7 @@
 </nav>
 <div id="MainDiv" class="container">
     <div class="row">
-        <div class="col-md-8" id="divContent">
+        <div class="col-md-8" id="divContent1">
             <h1>Cars at the present:</h1>
             <div class="card" style="width: 80%;">
                 <img class="card-img-top" src="Photos/wall%20(4).jpg" alt="Cars nowadays">
@@ -37,12 +37,13 @@
             </div>
         </div>
         <div class="col-md-4">
-            <button class="toggleBtn" onclick="toggle1(document.getElementById('ContentDiv1'))">
+            <button class="btn btn-danger mb-4 ml-4"  id ="section1"
+            onclick="toggle1(document.getElementById('divContent1'), document.getElementById('section1'), this.id)">
             Toggle section 1</button>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8" id="divContent">
+        <div class="col-md-8" id="divContent2">
             <h1>Cars at the future:</h1>
             <div class="card" style="width: 100%;">
                 <img class="card-img-top" src="Photos/wall%20(2).jpeg" alt="Future Cars">
@@ -60,7 +61,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <button class="toggleBtn2" onclick="toggle1(document.getElementById('ContentDiv2'))">
+            <button class="btn btn-danger mb-4 mt-4 ml-4"  id ="section2" onclick="toggle1(document.getElementById('divContent2'), document.getElementById('section2'), this.id)">
             Toggle section 2</button>
         </div>
     </div>
