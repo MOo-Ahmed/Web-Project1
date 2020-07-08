@@ -1,3 +1,5 @@
+//http://localhost:8080//Web-Project1/CarX-Website/HomePage.html
+
 function validateLoginForm()
 {
 	var email = document.forms["login"]["email"].value;
@@ -57,14 +59,6 @@ function toggle1(x, btn, secNum){
 }
 
 $(document).ready(function(){
-    $("button").click(function(){
-        $.get("", function(data) {
-            alert(data);
-        });
-    });
-});
-
-$(document).ready(function(){
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
     $("#T1 tr").filter(function() {
@@ -85,3 +79,16 @@ function highlightRows(){
     }
     
 }
+
+function ToggleNavBarIcon(word){
+    if(word.innerHTML == "off"){
+        word.innerHTML = "on";
+    } 
+    else{
+        word.innerHTML = "off" ;
+    }
+}
+
+$(document).ready(function(){
+    $(".ToggleNavbar").innerHtml = "on" ;
+});

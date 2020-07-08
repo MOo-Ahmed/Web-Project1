@@ -554,3 +554,15 @@ body.container-fluid:not(#myFooter){
 {
     background-color: orangered;
 }
+
+.navbar-toggler
+{
+    font-size: small ;
+    padding: 9px;
+    margin: 0px auto;
+    font-family: Times, Copperplate, courier,arial,helvetica;
+    color: yellow;
+    background-color: #111;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}

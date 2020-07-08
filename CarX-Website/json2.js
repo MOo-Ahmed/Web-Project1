@@ -5,18 +5,10 @@ function CreateTableFromJSON() {
     
         console.log(data);
         $.each( data.result, function( key, val ) {
-            items.push({name: data.result.name , code: data.result.code , states: data.result.states});
+            codes.push({name: data.result.name , code: data.result.code , states: data.result.states});
         });
     });
-    //alert(codes.length);
-    /*
-        
-    $.get("https://api.printful.com/countries", function(data, status){
-        alert(status);
-        codes = data ;
-    });
-    */
-
+    
     var col = [];   // used to store the keys to make the table headings
     var indices = [] ;  // used to know the indices where we have states
     var sizes = [] ;
