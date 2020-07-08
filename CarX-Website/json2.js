@@ -1,13 +1,19 @@
-function CreateTableFromJSON() {
+function getData(){
     var codes = [] ;
-    alert("hey");
     $.get("./json_data.json", function(data) {
-    
-        console.log(data);
-        $.each( data.result, function( key, val ) {
-            codes.push({name: data.result.name , code: data.result.code , states: data.result.states});
-        });
+        alert("The data " + data.result.length);
+        //console.log(data);
+        for( var i = 0 ; i < data.result.length ; i++) {
+            codes.push({name: data.result[i].name , code: data.result[i].code , states: data.result[i].states});
+        }
+        alert("The length here is " + codes.length);
+        //return codes;
+        setTimeout(makeTable(codes),3000);
     });
+}
+
+function makeTable(codes) {
+    alert(codes.length);
     
     var col = [];   // used to store the keys to make the table headings
     var indices = [] ;  // used to know the indices where we have states
@@ -26,6 +32,7 @@ function CreateTableFromJSON() {
             
         }
     }
+    /*
     var tmp = "";
     indices.forEach(function(entry) {
         tmp = tmp + entry + " , " ;
@@ -35,8 +42,6 @@ function CreateTableFromJSON() {
     sizes.forEach(function(entry) {
         document.getElementById("try2").innerHTML += entry + " , ";
     });
-    
-    /*
     document.getElementById("try").innerHTML = indices.toString;
     document.getElementById("try2").innerHTML = sizes.toString;
     */
@@ -96,4 +101,12 @@ function CreateTableFromJSON() {
     }
     var divContainer = document.getElementById("showData");
     divContainer.appendChild(table);
+}
+
+function CreateTableFromJSON() {
+    var c = [] ;
+    c = getData();
+    //alert("in main " + c.length);
+    
+    
 }
