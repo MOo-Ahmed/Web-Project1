@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CarX Store | SignUp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="styles.css">
+    <script src="myScript.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+     <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+<body class="container-fluid" id="SignupPage">
+    <div class="container">
+        
+       <form name="register" onsubmit="return validateRegisterForm()"  class="was-validated"
+          action="HomePage.html" class="myForm"  target="_self">
+            <h1 class="siteName"><a class="navLink" href="#">CarX</a></h1>
+            <div class="form-group">
+                <input name="name" class="form-control mt-sm-5 mb-3 mr-sm-2" type="text" placeholder="Your name .." autofocus required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group">
+                <input placeholder="Your e-mail" name="email" class="form-control mb-3 mr-sm-2" type="text"
+                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group">
+                <input placeholder="Your password"  name="psw" class="form-control mb-4 mr-sm-2" type="password" 
+                   pattern="[a-z0-9]" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <p class="formHints"><b>Note :</b> Password must contain both letters and numbers</p>
+            </div>
+            <div class="form-group">
+                <input placeholder="Confirm password"  name="psw2" class="form-control mb-3 mr-sm-2" type="password" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <input type="reset" value="Reset" class="btn btn-sm btn-dark mb-2" >
+            <input type="submit" value="Register"  class="btn btn-success btn-block mb-8 mlsm-4 mrsm-4"  >
+            <label>Already registered ? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <a href="Login.html" class="btn btn-sm btn-primary mb-2 mt-3">Sign in</a>
+       </form>
+    </div>
+</body>
+</html> 

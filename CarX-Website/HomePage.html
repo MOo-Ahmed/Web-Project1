@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CarX Store | Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="myScript.js"></script>
+</head>
+<body class="container-fluid">
+<nav class="navbar navbar-expand-xl|lg|md|sm bg-dark navbar-light fixed-top">
+    <h1 class="siteName"><a class="navLink" href="HomePage.html">CarX</a></h1>
+    <h3 class="brandWords">Giving you the best</h3>
+</nav>
+<nav class="navbar navbar-expand-sm beBlack fixed-top mb-5" id="MyNavBar">
+    <ul class="navbar-nav" id="ulNavBar">
+        <li class="nav-item">
+          <a class="nav-link" href="HomePage.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Products.html">Products</a>
+        </li>
+    </ul>
+</nav>
+<div id="MainDiv" class="container">
+    <div class="row">
+        <div class="col-md-8" id="divContent1">
+            <h1>Cars at the present:</h1>
+            <div class="card" style="width: 80%;">
+                <img class="card-img-top" src="Photos/wall%20(4).jpg" alt="Cars nowadays">
+                <div class="card-body">
+                    <p class="card-text">This is an example of modern cars. Despite being great-looking, there're still some leverage waiting to be added in the years to come.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-danger mb-4 ml-4"  id ="section1"
+            onclick="toggle1(document.getElementById('divContent1'), document.getElementById('section1'), this.id)">
+            Toggle section 1</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8" id="divContent2">
+            <h1>Cars at the future:</h1>
+            <div class="card" style="width: 100%;">
+                <img class="card-img-top" src="Photos/wall%20(2).jpeg" alt="Future Cars">
+                <div class="card-body">
+                    <p class="card-text">This is an example of future cars concepts. It has many features such as :</p>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">Air-Conditioned Seats</li>
+                        <li class="list-group-item">V2V Communication</li>
+                        <li class="list-group-item">Front-View Cameras</li>
+                        <li class="list-group-item">Active-Safety Airbags</li>
+                        <li class="list-group-item">Night Vision Capabilities</li>
+                        <li class="list-group-item">Adaptive Cruise Control</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-danger mb-4 mt-4 ml-4"  id ="section2" onclick="toggle1(document.getElementById('divContent2'), document.getElementById('section2'), this.id)">
+            Toggle section 2</button>
+        </div>
+    </div>
+</div>
+<footer class="page-footer font-small red pt-4" id="myFooter">
+
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+          <hr class="clearfix w-100 d-md-none pb-3">
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://honda.com/">Honda</a>
+              </li>
+              <li>
+                <a href="https://chevrolet.com/">Chevrolet</a>
+              </li>
+              <li>
+                <a href="https://nissanusa.com/">Nissanusa</a>
+              </li>
+              <li>
+                <a href="https://toyota.com/">Toyota</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+            
+          <!-- Grid column -->
+          <div class="col-md-6 mt-md-0 mt-3">
+            <div style="border: 2px solid black;">
+                <iframe class="myMap" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d220910.6427885009!2d31.335931762717536!3d30.101952644787154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1593721627676!5m2!1sen!2seg" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+          </div>
+          <!-- Grid column -->
+          
+            <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://mbusa.com/">Mercedes-Benz</a>
+              </li>
+              <li>
+                <a href="https://jeep.com/">Jeep</a>
+              </li>
+              <li>
+                <a href="https://kia.com/">KIA</a>
+              </li>
+              <li>
+                <a href="https://bmwusa.com/">BMW</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </div>
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://www.linkedin.com/in/fma2/"> Mohamed-FMA</a>
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+</body>
+</html>
