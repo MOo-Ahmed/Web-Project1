@@ -69,13 +69,14 @@ $(document).ready(function(){
 
 function highlightRows(){
     var table = document.getElementById("T1");
-    if(table.style.backgroundColor == "yellow"){
+    if(table.style.backgroundColor == "red"){
         table.style.backgroundColor = "" ;
-        table.style.color = "white";
+        table.style.display = "none";
     }
     else{
-        table.setAttribute("style", "background-color:yellow;");
-        table.style.color = "black";
+        
+        table.style.backgroundColor = "red";
+        table.style.color = "white";
     }
     
 }

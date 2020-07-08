@@ -1,20 +1,17 @@
 function getData(){
     var codes = [] ;
     $.get("./json_data.json", function(data) {
-        alert("The data " + data.result.length);
+        //alert("The data " + data.result.length);
         //console.log(data);
         for( var i = 0 ; i < data.result.length ; i++) {
             codes.push({name: data.result[i].name , code: data.result[i].code , states: data.result[i].states});
         }
-        alert("The length here is " + codes.length);
-        //return codes;
+        //alert("The length here is " + codes.length);
         setTimeout(makeTable(codes),3000);
     });
 }
 
-function makeTable(codes) {
-    alert(codes.length);
-    
+function makeTable(codes) {    
     var col = [];   // used to store the keys to make the table headings
     var indices = [] ;  // used to know the indices where we have states
     var sizes = [] ;
@@ -104,9 +101,5 @@ function makeTable(codes) {
 }
 
 function CreateTableFromJSON() {
-    var c = [] ;
-    c = getData();
-    //alert("in main " + c.length);
-    
-    
+    getData();  
 }
