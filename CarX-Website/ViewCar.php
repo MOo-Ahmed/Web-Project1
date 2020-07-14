@@ -38,12 +38,35 @@
         </div>
     </nav>
     <div id="MainDiv" class="container">
-        <a href = "NewCarForm.html"  class="btn btn-md btn-primary mr-3 mb-5 mt-5">insert new car</a>
-        <a href = "ViewAllCars.php"  class="btn btn-md btn-primary mb-5 mt-5">Select all cars</a>
         <?php 
             require('Car.php');
-            selectSampleDataFromDataBase();
-            
+            $ID = $_POST["ID"];
+            $car = getCarFromDataBase($ID);
+            echo '
+            <table class="table table-dark">
+                <tr>
+                    <th> ID </th>
+                    <th> Brand </th>
+                    <th> Model </th>
+                    <th> Price </th>
+                    <th> Warranty </th>
+                </tr>';
+
+                $ID = $car->getID();
+                $brand = $car->getBrand();
+                $model = $car->getModel();
+                $warranty = $car->getWarranty();
+                $price = $car->getPrice(); 
+
+                echo '
+                <tr> 
+                    <td>'.$ID.'</td> 
+                    <td>'.$brand.'</td> 
+                    <td>'.$model.'</td> 
+                    <td>'.$price.'</td> 
+                    <td>'.$warranty.'</td> 
+                </tr>';
+            echo '</table>' ;
         ?>
 
     </div>

@@ -66,7 +66,8 @@
         return mysqli_connect(SERVER_LOCATION, USER_NAME, PASSWORD, DATABASE_NAME);
     }
 
-    function getCarFromDataBase($connection, $ID) {
+    function getCarFromDataBase($ID) {
+        $connection = establishConnection();
         $query = "select * from `Car` where `id` = $ID";
         $result = mysqli_query($connection, $query);
         $car = new Car();
@@ -74,6 +75,8 @@
             $car->setID($row["id"]);
             $car->setAll($row["model"], $row["brand"], $row["price"], $row["warranty"]);
         }
+        $result->free();
+        $connection->close();
         return $car;
     }
 
@@ -107,7 +110,8 @@
             mysqli_close($connection);
             header("Location: NewCarForm.html");
         }
-        //echo $returnMessage;
+        $result->free();
+        $connection->close();
     }
 
     function selectAllCarsFromDataBase(){
@@ -203,4 +207,47 @@
         $connection->close();
     } 
     
+    function updateCarInDataBase($car) {
+        $connection = establishConnection();
+        if(!$connection) {
+            //$returnMessage = "Can't connect to server.";
+            mysqli_close($connection);
+            header("Location: UpdateCarForm.php");
+        }
+
+        if($car->getBrand() == null || $car->getModel() == null || $car->getPrice() == null) {
+            //$returnMessage = "One of the required inputs is null";
+            mysqli_close($connection);
+            header("Location: UpdateCarForm.php");
+        }
+        $ID = $car->getID();
+        $brand = $car->getBrand();
+        $price = $car->getPrice();
+        $model = $car->getModel();
+        $warranty = $car->getWarranty();
+        $query = "update `car` set `brand` = '$brand', `price` = '$price', `model` = '$model',
+        `warranty`= '$warranty' where id = '$ID'";
+
+        $result = mysqli_query($connection, $query);
+        if($result) {
+            //$returnMessage = "Insertion Succeed.";
+            mysqli_close($connection);
+            header("Location: Main.php");
+        } else {
+            //$returnMessage = "Insertion Failed.";
+            mysqli_close($connection);
+            header("Location: UpdateCarForm.php");
+        }
+        $result->free();
+        $connection->close();
+    }
+
+    function deleteCar($ID){
+        $connection = establishConnection();
+        $query = "delete from `Car` where `id` = $ID";
+        $result = mysqli_query($connection, $query);
+        $car = new Car();
+        $connection->close();
+        header("Location: Main.php");
+    }
 ?>

@@ -175,6 +175,11 @@ label
     text-shadow: 1px 1px white ;
 }
 
+.Label
+{
+    margin: 0px;
+}
+
 input.textInputs
 {
     display: block;
