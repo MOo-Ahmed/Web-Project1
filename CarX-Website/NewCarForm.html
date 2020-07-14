@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CarX Store | New Car</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+     <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="myScript.js"></script>
+</head>
+<body class="container-fluid" id="NewCarPage">
+    
+    <div class="container">
+       <form  method="post" name="newCar" action="NewCar.php"
+             class="myForm"  target="_self">
+            <h1 class="siteName"><a class="navLink" href="#">CarX</a></h1>
+            <div class="form-group">
+                <input name="model" class="form-control mt-sm-5 mb-3 mr-sm-2" type="text" placeholder="Car model .." autofocus required>
+            </div>
+            <div class="form-group">
+                <input placeholder="Car brand name" name="brand" class="form-control mb-3 mr-sm-2" type="text" required>
+            </div>
+            <div class="form-group">
+                <input placeholder="Car price"  name="price" class="form-control mb-4 mr-sm-2" type="text" required>
+            </div>
+            <div class="form-group">
+                <input placeholder="Years of Warranty"  name="warranty" class="form-control mb-3 mr-sm-2" type="text" required>
+            </div>
+            <input type="reset" value="Reset" class="btn btn-sm btn-dark mb-2" >
+            <input type="submit" value="Confirm"  class="btn btn-success btn-block mb-8 mlsm-4 mrsm-4">
+       </form>
+    </div>
+</body>
+</html>

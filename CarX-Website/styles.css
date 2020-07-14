@@ -500,18 +500,9 @@ body.container-fluid:not(#myFooter){
     width: 70%; margin: auto;
 }
 
-#LoginPage, #SignupPage
-{
-    background-image: url("./Photos/bmw.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-
 .card-text, .list-group
 {
-    font-family: 'Open Sans', sans-serif;;
+    font-family: 'Open Sans', sans-serif;
     color: darkgoldenrod;
     font-weight: bold;
 }
@@ -565,4 +556,13 @@ body.container-fluid:not(#myFooter){
     background-color: #111;
     border: 1px solid lightgray;
     border-radius: 10px;
+}
+
+#NewCarPage , #LoginPage , #SignupPage
+{
+    background-image: url("./Photos/c1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
