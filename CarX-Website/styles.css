@@ -142,7 +142,6 @@ div.container .navLink
     padding-bottom: 30px;
     overflow: auto;
     float: left;
-    
 }
 
 fieldset
@@ -570,4 +569,37 @@ body.container-fluid:not(#myFooter){
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+}
+
+#FormDiv
+{
+    color: white ;
+    padding-left: 1rem ;
+    border: 1px solid black ;
+    border-radius: 15px;
+    background-color: black;
+}
+
+#shortForm
+{
+    color: aliceblue ;
+    max-width: 100%;
+    float:none;
+    margin: 0px ;
+}
+
+#brand, #model, #price, #warranty
+{
+    background-color: black ;
+    color : azure;
+    border-radius: 0px;
+    border: 0px ;
+    border-bottom: 2px solid white ;
+}
+
+#brand::placeholder, #model::placeholder, #price::placeholder, #warranty::placeholder
+{
+    color: #ff3333;
+    opacity: 1; 
+    
 }

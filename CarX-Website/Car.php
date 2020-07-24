@@ -104,11 +104,11 @@
         if($result) {
             //$returnMessage = "Insertion Succeed.";
             mysqli_close($connection);
-            header("Location: Main.php");
+            //header("Location: Main.php");
         } else {
             //$returnMessage = "Insertion Failed.";
             mysqli_close($connection);
-            header("Location: NewCarForm.html");
+            //header("Location: NewCarForm.html");
         }
         $result->free();
         $connection->close();
@@ -159,66 +159,18 @@
          $connection->close();
     } 
 
-    function selectSampleDataFromDataBase(){
-        $connection = establishConnection();
-        $query = "SELECT id , model FROM car";
-        $result = mysqli_query($connection, $query);
-        
-        echo '
-        <table class="table table-dark">
-			<tr>
-				<th> ID </th>
-				<th> Model </th>
-				<th></th>
-				<th></th>
-				<th></th>
-            </tr>';
-
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $ID = $row["id"];
-                $model = $row["model"];                
-                echo '<tr><td>'.$ID;
-                echo "<td>".$model ;
-                
-                echo "<td><form action='ViewCar.php' method='POST'>";
-                echo "<input type='hidden' name='ID' value=". $ID . ">";
-                echo "<input type='submit' class = 'btn btn-md btn-light' value='View'>";
-                echo "</form>";
-                
-                echo "<td><form action='UpdateCarForm.php' method='POST'>";
-                echo "<input type='hidden' name='ID' value=". $ID . ">";
-                echo "<input type='submit' class = 'btn btn-md btn-warning'  value='Update'>";
-                echo "</form>";
-                
-                echo "<td><form action='DeleteCar.php' method='POST'>";
-                echo "<input type='hidden' name='ID' value=". $ID . ">";
-                echo "<input type='submit'  class = 'btn btn-md btn-danger' value='Delete'>";
-                echo "</form>";
-                echo '</tr>';
-
-            }
-            echo '</table>' ;
-            $result->free();
-        } 
-        else {
-            echo ("0 result") ;
-        }
-        $connection->close();
-    } 
-    
     function updateCarInDataBase($car) {
         $connection = establishConnection();
         if(!$connection) {
             //$returnMessage = "Can't connect to server.";
             mysqli_close($connection);
-            header("Location: UpdateCarForm.php");
+            //header("Location: UpdateCarForm.php");
         }
 
         if($car->getBrand() == null || $car->getModel() == null || $car->getPrice() == null) {
             //$returnMessage = "One of the required inputs is null";
             mysqli_close($connection);
-            header("Location: UpdateCarForm.php");
+            //header("Location: UpdateCarForm.php");
         }
         $ID = $car->getID();
         $brand = $car->getBrand();
@@ -232,22 +184,15 @@
         if($result) {
             //$returnMessage = "Insertion Succeed.";
             mysqli_close($connection);
-            header("Location: Main.php");
+            //header("Location: Main.php");
         } else {
             //$returnMessage = "Insertion Failed.";
             mysqli_close($connection);
-            header("Location: UpdateCarForm.php");
+            //header("Location: UpdateCarForm.php");
         }
         $result->free();
         $connection->close();
     }
 
-    function deleteCar($ID){
-        $connection = establishConnection();
-        $query = "delete from `Car` where `id` = $ID";
-        $result = mysqli_query($connection, $query);
-        $car = new Car();
-        $connection->close();
-        header("Location: Main.php");
-    }
+
 ?>

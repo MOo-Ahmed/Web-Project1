@@ -32,6 +32,9 @@
                   <a class="nav-link" href="Main.php">Main</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="MainWithAjax.php">Main with ajax</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="Products.html">Products</a>
                 </li>
             </ul>

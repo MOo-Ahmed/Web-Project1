@@ -2,9 +2,10 @@
         require('Car.php');
         $car = new Car();
         $car->setAll($_POST["model"], $_POST["brand"], $_POST["price"], $_POST["warranty"]);
-        echo 'Waiting ......' ;
-        //$car->print();
+        //echo 'Waiting ......' ;
         saveCarToDataBase($car);
-        
+        sleep(2);
+        selectSampleDataFromDataBase();
+        //sleep(2);
     ?>
     
