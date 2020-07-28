@@ -601,5 +601,10 @@ body.container-fluid:not(#myFooter){
 {
     color: #ff3333;
     opacity: 1; 
-    
+}
+
+#liveViewTable
+{
+    background-color: darkred ;
+    color: white ;
 }

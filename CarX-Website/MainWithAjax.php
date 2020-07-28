@@ -1,3 +1,7 @@
+<?php
+	SESSION_START();
+	$_SESSION["name"] = "Mo" ;
+?>
 <!DOCTYPE html>   
 <html>
 <head>
@@ -40,9 +44,10 @@
     <div id="MainDiv" class="container">
         <div class="row">
             <div id="FormDiv" class="col-4 crudForm">
+                <div id="live_view"></div>
                 <form id="shortForm" method="post" name="newCar" target="_self">
                     <div class="form-group">
-                        <input name="model" class="form-control mt-sm-5 mb-3 mr-sm-2" type="text" placeholder="Car model .." autofocus required id = "model">
+                        <input name="model" class="form-control mt-sm-5 mb-3 mr-sm-2" type="text" placeholder="Car model .." autofocus required id = "model" value="">
                     </div>
                     <div class="form-group">
                         <input placeholder="Car brand name" name="brand" class="form-control mb-3 mr-sm-2" type="text" required id = "brand">
@@ -54,6 +59,7 @@
                         <input placeholder="Years of Warranty"  name="warranty" class="form-control mb-3 mr-sm-2" type="text" required id = "warranty">
                     </div>
                     <input type="reset" value="Reset" class="btn btn-sm btn-warning mb-2" >
+                    <input type = "text" style="display:none;" name="id" id="id" >
                     <input type="submit" id="submitInsertBtn" value="add"  class="btn btn-info btn-block mb-5 mlsm-4 mrsm-4">
                     <input type="submit" id="submitUpdateBtn" value="update"  class="btn btn-info btn-block mb-5 mlsm-4 mrsm-4" style="display:none;">
                </form>
