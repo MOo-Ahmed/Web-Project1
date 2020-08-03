@@ -44,7 +44,7 @@
         <a href = "NewCarForm.html"  class="btn btn-md btn-primary mr-3 mb-5 mt-5">insert new car</a>
         <a href = "ViewAllCars.php"  class="btn btn-md btn-primary mb-5 mt-5">Select all cars</a>
         <?php 
-            require('Car.php');
+            require('db.php');
             selectSampleDataFromDataBase();
             
         ?>

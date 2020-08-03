@@ -13,12 +13,12 @@
 
 <body class="container-fluid">
     <div id="MainDiv" class="container">
-           <form  method="post" name="newCar" action="UpdateCar.php"
+           <form  method="post" name="newCar" action="Updatedb.php"
                  class="myForm"  target="_self">
                 <h1 class="siteName"><a class="navLink" href="#">CarX</a></h1>
                 <div class="form-group">
                 <?php 
-                    require_once('Car.php');
+                    require_once('db.php');
                     $car = new Car();
                     $car = getCarFromDataBase($_POST["ID"]);
                     $ID = $_POST["ID"];
@@ -31,7 +31,7 @@
                 echo '</div>';
                 echo '<div class="form-group">';
                  
-                    //require_once('Car.php');
+                    //require_once('db.php');
                     //$car = new Car();
                     //$car = getCarFromDataBase($_POST["ID"]);
                     $brand = $car->getBrand() ;
@@ -41,7 +41,7 @@
                 echo '</div>';
                 echo '<div class="form-group">';
                  
-                    //require_once('Car.php');
+                    //require_once('db.php');
                     //$car = new Car();
                     //$car = getCarFromDataBase($_POST["ID"]);
                     $price = $car->getPrice() ;
@@ -52,7 +52,7 @@
                 echo '</div>';
                 echo '<div class="form-group">';
                  
-                    //require_once('Car.php');
+                    //require_once('db.php');
                     //$car = new Car();
                     //$car = getCarFromDataBase($_POST["ID"]);
                     $war = $car->getWarranty() ;

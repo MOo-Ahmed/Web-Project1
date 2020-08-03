@@ -1,3 +1,35 @@
+<?php
+    session_start();
+    $message = "" ;
+    
+    if(!isset($_SESSION['id'])){
+        header("Login.php") ;
+    }
+    
+    require('db.php');
+    if(isset($_POST["email"]) && isset($_POST["password"])){
+        $connection = establishConnection();
+        $email = $_POST["email"] ;
+        $password = $_POST["password"] ;
+        $query = "select * from `user` where `email` = '$email' and `password` = '$password' limit 1";
+        $result = mysqli_query($connection, $query);
+        $counter = 0;
+        $id = -1 ;
+        while($row = mysqli_fetch_assoc($result)) {
+            $id = $row['id'];
+            $counter++;
+        }
+        mysqli_close($connection);
+        if($counter == 1) {
+            $_SESSION['email'] = $email;
+            $_SESSION['id'] = $id;
+            header("Location: HomePage.html");
+        } else {
+            $message = "Please enter correct info";
+        }
+    }
+
+echo '
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +45,7 @@
 </head>
 <body class="container-fluid" id="LoginPage">
     <div class="container">
-      <form name="login" class="myForm"  target="_self">
+      <form  action="Login.php" method="post" name="login" class="myForm"  target="_self">
         <br><br>
           <h1 class="siteName"><a class="navLink" href="#">CarX</a></h1>
         <div class="form-group">
@@ -21,9 +53,11 @@
             
         </div>
         <div class="form-group">
-            <input placeholder="Your password"  name="psw" class="form-control mb-6 mr-sm-2" type="password" id="loginPassword" maxlength="15" required>
+            <input placeholder="Your password"  name="password" class="form-control mb-6 mr-sm-2" type="password" id="loginPassword" maxlength="15" required>
             <input type="reset" value="Reset" class="btn btn-sm btn-dark mt-3 mb-3 ml-4">
             <input type="submit" id="submitSignInBtn" value="Log in"  class="btn btn-success btn-block mb-8 mlsm-4 mr-sm-4" > 
+            <br>
+            <label>'.$message.'</label>
             <br>
             <label>Not registered yet? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <a href="RegPage.html" class="btn btn-sm btn-primary mb-2 mt-3">Sign Up</a>
@@ -31,7 +65,10 @@
       </form>  
     </div>
 </body>
+' ;
+    /*
     <script>
+        
         $(document).on('click', '#submitSignInBtn', function(event){
             event.preventDefault();
             var email = $('#loginEmail').val();
@@ -66,17 +103,7 @@
             }
         });
     </script>
-</html> 
+    */
+echo '</html>' ; 
 
-<?php
-    session_start();
-    require('db.php');
-    $data = [] ;
-    if(isUserRegistered($_POST["email"], $_POST["password"]) == true){
-        $data["result"] = "success" ;
-    }
-    else{
-        $data["result"] = "fail" ;
-    }
-    echo json_encode($data);
 ?>

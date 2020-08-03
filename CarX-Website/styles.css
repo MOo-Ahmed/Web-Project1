@@ -424,7 +424,7 @@ form.was-validated
 #MyNavBar
 {
     font-weight: bold ;
-    margin-top: 7rem ;
+    /*margin-top: 7rem ;*/
     background-color: #f69e7b;
 }
 
@@ -545,9 +545,21 @@ body.container-fluid:not(#myFooter){
   box-shadow: 1px 1px 0 #999;
 }
 
-#section1,#section2
+#toggleSection1Btn,#toggleSection2Btn
 {
     background-color: orangered;
+}
+
+#toggleSection1Btn:hover{
+    
+    background-color: lawngreen;
+    color: black ;
+}
+
+#toggleSection2Btn:hover
+{
+    background-color: lawngreen;
+    color: black ;
 }
 
 .navbar-toggler

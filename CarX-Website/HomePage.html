@@ -15,8 +15,8 @@
 <body class="container-fluid">
     
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="TopNav">
-        <!--<h1 class="navbar-brand siteName"><a class="navLink" href="HomePage.html">CarX</a></h1>
-        <h3 class="brandWords">Giving you the best</h3>-->
+        <h1 class="navbar-brand siteName"><a class="navLink" href="HomePage.html">CarX</a></h1>
+        <h3 class="brandWords">Giving you the best</h3>
     </nav>
     <nav class="navbar navbar-expand-sm beBlack sticky-top mb-5" id="MyNavBar">
         <!-- Toggler/collapsibe Button -->
@@ -36,6 +36,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="Products.html">Products</a>
                 </li>
+                <li class="nav-item">
+                  <a class="btn btn-info ml-5" style="border: 0px; color: white;" href="Logout.php">Logout</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -52,8 +55,8 @@
             </div>
         </div>
         <div class="col-md-4">
-            <button class="btn btn-danger mb-4 ml-4"  id ="section1"
-            onclick="toggle1(document.getElementById('divContent1'), document.getElementById('section1'), this.id)">
+            <button class="btn btn-danger mb-4 ml-4"  id ="toggleSection1Btn"
+            onclick="toggle1(document.getElementById('divContent1'), document.getElementById('toggleSection1Btn'), this.id)">
             Toggle section 1</button>
         </div>
     </div>
@@ -76,7 +79,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <button class="btn btn-danger mb-4 mt-4 ml-4"  id ="section2" onclick="toggle1(document.getElementById('divContent2'), document.getElementById('section2'), this.id)">
+            <button class="btn btn-danger mb-4 mt-4 ml-4"  id ="toggleSection2Btn" onclick="toggle1(document.getElementById('divContent2'), document.getElementById('toggleSection2Btn'), this.id)">
             Toggle section 2</button>
         </div>
     </div>

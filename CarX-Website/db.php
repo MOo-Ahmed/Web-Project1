@@ -55,6 +55,28 @@
         private $email ;
         private $password ;
         
+        function setAll($name, $id, $email, $password) {
+            $this->id = $id;
+            $this->name = $name;
+            $this->password = $password;
+            $this->email = $email;
+        }
+        
+        function getID (){
+            return $this->id  ;
+        }
+        
+        function getName (){
+            return $this->name  ;
+        }
+        
+        function getEmail (){
+            return $this->email  ;
+        }
+        
+        function getPassword (){
+            return $this->password  ;
+        }
     }
 
     function establishConnection() {
@@ -193,6 +215,71 @@
         $result->free();
         $connection->close();
     }
+    
+    function isEmailExists($connection, $email){
+        $query = "select * from `user` where `email` like '$email'";
+        $result = mysqli_query($connection, $query);
+        $counter = 0;
+        while($row = mysqli_fetch_assoc($result)) {
+            $counter++;
+        }
+        if($counter == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 
-	
+	function saveUserToDB($user){
+        $connection = establishConnection();
+        /*
+        if($user->getName() == null || $user->getPassword() == null || $user->getEmail() == null) {
+            //$returnMessage = "One of required inputs is null.";
+            mysqli_close($connection);
+            header("Location: RegPage.html");
+        }
+        */
+        if(isEmailExists($connection, $user->getEmail())) {
+            //$returnMessage = "User Name is already exists.";
+            mysqli_close($connection);
+            header("Location: RegPage.html");
+        }
+        
+        $name = $user->getName();
+        $password = $user->getPassword() ;
+        $email = $user->getEmail() ;
+        
+        $query = "INSERT INTO `user` (`name`, `password`, `email`) VALUES ('$name', '$password', '$email')";
+
+        $result = mysqli_query($connection, $query);
+        if($result) {
+            //$returnMessage = "Registration Completed.";
+            mysqli_close($connection);
+            //echo '<script>alert("success");</script>' ;
+            header("Location: Products.html");
+            //echo '<script>alert("success");</script>' ;
+        } else {
+            //$returnMessage = "Registration Failed.";
+            mysqli_close($connection);
+            header("Location: RegPage.html");
+        }
+    }
+    
+    function isUserRegistered($email, $password){
+        $connection = establishConnection();
+        //if(isEmailExists($connection, $email) == true){
+            $query = "select * from `user` where `email` = '$email' and `password` = '$password'";
+            $result = mysqli_query($connection, $query);
+            $counter = 0;
+            while($row = mysqli_fetch_assoc($result)) {
+                $counter++;
+            }
+            mysqli_close($connection);
+            if($counter == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        //}
+    }
 ?>

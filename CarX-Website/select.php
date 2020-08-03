@@ -1,5 +1,5 @@
 <?php 
-    require ('Car.php');
+    require ('db.php');
     $connection = establishConnection();
     $query = "SELECT id , model FROM car";
     $result = mysqli_query($connection, $query);

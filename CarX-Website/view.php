@@ -1,5 +1,5 @@
 <?php 
-    require("Car.php") ;
+    require("db.php") ;
     $ID = $_POST["ID"] ;
     $car = new Car();
     $car = getCarFromDataBase($ID) ;

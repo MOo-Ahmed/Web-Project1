@@ -1,5 +1,5 @@
 <?php 
-    require("Car.php");
+    require("db.php");
     $ID = $_POST["ID"];
     $connection = establishConnection();
     $query = "delete from `Car` where `id` = $ID";

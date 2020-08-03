@@ -39,7 +39,7 @@
     </nav>
     <div id="MainDiv" class="container">
         <?php 
-        require('Car.php');
+        require('db.php');
         selectAllCarsFromDataBase();
         
         ?>
